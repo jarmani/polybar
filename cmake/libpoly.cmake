@@ -100,7 +100,7 @@ endif()
 find_package(Xcb ${XRANDR_VERSION} REQUIRED COMPONENTS RANDR)
 find_package(Xcb REQUIRED COMPONENTS ${XORG_EXTENSIONS})
 
-# FreeBSD Support
-if(CMAKE_SYSTEM_NAME STREQUAL "FreeBSD")
+# FreeBSD and OpenBSD Support
+if(CMAKE_SYSTEM_NAME STREQUAL "FreeBSD" OR CMAKE_SYSTEM_NAME STREQUAL "OpenBSD")
   find_package(LibInotify REQUIRED)
 endif()
